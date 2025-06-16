@@ -14,20 +14,14 @@ export const PATH = {
 function Pages() {
     return (
         <div>
+            {/*Routes выбирает первый подходящий роут*/}
             <Routes>
-                {/* Redirect from root to Pre-Junior page */}
-                <Route path="/" element={<Navigate to={PATH.PRE_JUNIOR} replace />} />
+                <Route path="/" element={<Navigate to={PATH.PRE_JUNIOR} />} />
 
-                {/* Route for Pre-Junior page */}
                 <Route path={PATH.PRE_JUNIOR} element={<PreJunior />} />
-
-                {/* Route for Junior page */}
                 <Route path={PATH.JUNIOR} element={<Junior />} />
-
-                {/* Route for Junior-Plus page */}
                 <Route path={PATH.JUNIOR_PLUS} element={<JuniorPlus />} />
 
-                {/* Catch-all route for 404 errors */}
                 <Route path="*" element={<Error404 />} />
             </Routes>
         </div>
