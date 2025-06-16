@@ -9,10 +9,10 @@ import Pages from './Pages'
 * 3 - застилизовать хэдэр и сайдбар в соответствии с дизайном
 * */
 
+// Для деплоя на GitHub Pages используем HashRouter — он корректно работает на статическом хостинге
 function HW5() {
     return (
         <HashRouter>
-            {/*в gh-pages лучше работает HashRouter, с BrowserRouter скорее всего не пройдёт тест*/}
             <Layout>
                 <Pages />
             </Layout>
